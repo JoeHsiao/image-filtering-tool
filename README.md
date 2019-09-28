@@ -3,8 +3,8 @@ This is a GUI tool for manually filtering out of images from [Matting Human Data
 
 Even though the dataset provides a large amount of images (34427), the quality of matting for most images are not very good, e.g. missing body parts, and scattered alpha values, which might suffocate the performance of a trained model. This tool aids user to mark down the good ones, and only use those for training purpose.
 
-![ScreenShot](/screenshots/good_matting.png)
-![ScreenShot](/screenshots/bad_matting.png)
+![ScreenShot](/screenshots/good_matting.png | width=100)
+![ScreenShot](/screenshots/bad_matting.png | width=100)
 
 # Usage
 - Right arrow: Mark current image as 'bad', and move on to the next image.
