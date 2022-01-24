@@ -1,7 +1,12 @@
-# Training Data Filtering
-This is a GUI tool for manually filtering out images from [Matting Human Datasets](https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets). Results are saved to a local .csv file, and the progress will resume from where was left out last time.
+# Matting Human Datasets Labling 
+This is a GUI tool for manually filtering images from the [Matting Human Datasets](https://www.kaggle.com/laurentmih/aisegmentcom-matting-human-datasets) dataset on Kaggle. This dataset provides a large number of images (34427), yet the quality of most mattings is not very good, e.g. mislabeled background pixels and random alpha values, which suffocate the performance of a neural network. This tool helps label the good ones and ignore the bad ones.
 
-Even though the dataset provides a large amount of images (34427), the quality of matting for most images is not very good, e.g. mislabeled background pixels and random alpha values, which will suffocate the performance of a neural network. This tool aids user to lable the good training data and ignore the bad ones.
+# How it works
+The programs sorts all the images in terms of file names, and displays one image at a time on the screen, with the alpha matting superimposed on the image. Users check the matting quality, and decide whether the matting is good or bad.
+
+Note that if labeling is interrupted, the program remembers which image it was stopped at and will resume from that image next time. Labeling results will be stored in a .csv file. 
+
+# Program interface:
 <p>
 <img src="/screenshots/good_matting.png" width="30%" height="30%" />
 <img src="/screenshots/bad_matting.png" width="30%" height="30%" />
@@ -14,5 +19,3 @@ Even though the dataset provides a large amount of images (34427), the quality o
 - Up arrow: Mark current image as 'good'.
 - Down arrow: Mark current image as 'bad'.
 - Esc: save and exit.
-
-Each session the program will start from where was left out last time, and save the work when it exits. It also prints out the number of acculumated good images so far, so feel free to stop if you get enough images for training.
